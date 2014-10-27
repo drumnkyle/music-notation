@@ -1,0 +1,257 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2769E8AE19FD7B4400665FEC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2769E8AD19FD7B4400665FEC /* main.cpp */; };
+		2769E8B619FD7B8600665FEC /* libMusicNotation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2769E8B519FD7B8600665FEC /* libMusicNotation.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2769E8A819FD7B4400665FEC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2769E8AA19FD7B4400665FEC /* MusicNotationDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MusicNotationDemo; sourceTree = BUILT_PRODUCTS_DIR; };
+		2769E8AD19FD7B4400665FEC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2769E8B419FD7B6A00665FEC /* tablature_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tablature_api.h; path = ../../src/tablature_api.h; sourceTree = "<group>"; };
+		2769E8B519FD7B8600665FEC /* libMusicNotation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMusicNotation.a; path = ../MusicNotation/build/Debug/libMusicNotation.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2769E8A719FD7B4400665FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2769E8B619FD7B8600665FEC /* libMusicNotation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2769E8A119FD7B4400665FEC = {
+			isa = PBXGroup;
+			children = (
+				2769E8B519FD7B8600665FEC /* libMusicNotation.a */,
+				2769E8AC19FD7B4400665FEC /* MusicNotationDemo */,
+				2769E8AB19FD7B4400665FEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2769E8AB19FD7B4400665FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2769E8AA19FD7B4400665FEC /* MusicNotationDemo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2769E8AC19FD7B4400665FEC /* MusicNotationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2769E8B419FD7B6A00665FEC /* tablature_api.h */,
+				2769E8AD19FD7B4400665FEC /* main.cpp */,
+			);
+			path = MusicNotationDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2769E8A919FD7B4400665FEC /* MusicNotationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2769E8B119FD7B4400665FEC /* Build configuration list for PBXNativeTarget "MusicNotationDemo" */;
+			buildPhases = (
+				2769E8A619FD7B4400665FEC /* Sources */,
+				2769E8A719FD7B4400665FEC /* Frameworks */,
+				2769E8A819FD7B4400665FEC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicNotationDemo;
+			productName = MusicNotationDemo;
+			productReference = 2769E8AA19FD7B4400665FEC /* MusicNotationDemo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2769E8A219FD7B4400665FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Kyle Sherman";
+				TargetAttributes = {
+					2769E8A919FD7B4400665FEC = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 2769E8A519FD7B4400665FEC /* Build configuration list for PBXProject "MusicNotationDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2769E8A119FD7B4400665FEC;
+			productRefGroup = 2769E8AB19FD7B4400665FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2769E8A919FD7B4400665FEC /* MusicNotationDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2769E8A619FD7B4400665FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2769E8AE19FD7B4400665FEC /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2769E8AF19FD7B4400665FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2769E8B019FD7B4400665FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2769E8B219FD7B4400665FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/kyle/Documents/iOS,
+					Apps/My,
+					"GitHub/music-notation/MusicNotation/build/Debug",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2769E8B319FD7B4400665FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/kyle/Documents/iOS,
+					Apps/My,
+					"GitHub/music-notation/MusicNotation/build/Debug",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2769E8A519FD7B4400665FEC /* Build configuration list for PBXProject "MusicNotationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2769E8AF19FD7B4400665FEC /* Debug */,
+				2769E8B019FD7B4400665FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2769E8B119FD7B4400665FEC /* Build configuration list for PBXNativeTarget "MusicNotationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2769E8B219FD7B4400665FEC /* Debug */,
+				2769E8B319FD7B4400665FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2769E8A219FD7B4400665FEC /* Project object */;
+}
