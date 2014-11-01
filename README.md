@@ -12,17 +12,19 @@ There is also a plan to create an easy to use input file format to create the mu
 
 ===
 **Building**
+
 This project uses CMake to support cross-platform development.
+
 1. Go to www.cmake.org to download or on a Mac use Homebrew (http://brew.sh)
 
-    brew install cmake
+        $ /: brew install cmake
 
 2. You should make a build directory in the top level directory.
 3. Change directories into that build directory.
 4. run cmake in that directory and optionally provide -G with the generator you would like (for the IDE of your choice). Use cmake -h for information on the different generators
 
-    cmake -G Xcode ../
+        $ build: cmake -G Xcode ../
 
 5. You can find the project file for your IDE that you can open for the demo project in that same build directory.
 
-    open music-notation-demo.xcodeproj
+        $ build: open music-notation-demo.xcodeproj
