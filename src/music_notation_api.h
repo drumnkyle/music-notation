@@ -1,5 +1,5 @@
-#ifndef TABLATURE_API_H
-#define TABLATURE_API_H
+#ifndef MUSIC_NOTATION_API_H
+#define MUSIC_NOTATION_API_H
 
 #include "measure.h"
 #include "note.h"
@@ -9,4 +9,4 @@
 #include "types.h"
 
 
-#endif // TABLATURE_API_H
+#endif // MUSIC_NOTATION_API_H
