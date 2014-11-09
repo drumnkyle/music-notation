@@ -14,8 +14,8 @@ class Measure
 public:
     Measure();
     Measure(const Measure& measure);
-    Measure(Timing timing);
-    Measure(Repeat repeatMode);
+    Measure(UInt index, Timing timing);
+    Measure(UInt index, Repeat repeatMode);
     
     ~Measure();
 	
@@ -42,14 +42,28 @@ public:
 	 */
     bool removeNote(UInt index);
 	/**
-	 THe timing associated with the measure.
+	 The timing associated with the measure.
 	 */
     Timing* getTiming();
 
     string description();
+	
+	/**
+	 Get the index within the staff that this measure is located.
+	 
+	 @return The value of the current index.
+	 */
+	UInt getIndex();
+	
+	/**
+	 Set the index within the staff that this measure is located.
+	 
+	 @param index The index to set.
+	 */
+	void setIndex(UInt index);
     
 private:
-    UInt m_index; // needed if it will be used in an array/vector, but not if in a linked list
+    UInt m_index;
     UInt m_currentRepeat;
     UInt m_repeatCount;
     Repeat m_repeatMode;

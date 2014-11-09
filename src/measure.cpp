@@ -18,14 +18,16 @@ Measure::Measure(const Measure& measure)
     this->m_timing = measure.m_timing;
 }
 
-Measure::Measure(Timing timing) :
-    m_timing(timing),
+Measure::Measure(UInt index, Timing timing) :
+	m_index(index),
     m_repeatMode(RepeatNone),
-    m_isComplete(false)
+    m_isComplete(false),
+	m_timing(timing)
 {
 }
 
-Measure::Measure(Repeat repeatMode) :
+Measure::Measure(UInt index, Repeat repeatMode) :
+	m_index(index),
     m_repeatMode(repeatMode),
     m_isComplete(false)
 {
@@ -66,6 +68,16 @@ bool Measure::removeNote(UInt index)
 Timing* Measure::getTiming()
 {
     return &m_timing;
+}
+
+UInt Measure::getIndex()
+{
+	return m_index;
+}
+
+void Measure::setIndex(UInt index)
+{
+	m_index = index;
 }
 
 string Measure::description()

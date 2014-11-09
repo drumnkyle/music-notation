@@ -32,18 +32,17 @@ string Staff::description()
     Timing *timing = new Timing();
     
     // Print out description for every measure
-    for (int i = 0; i < m_measures.size(); i++)
-    {
-        Measure& measure = m_measures.at(i);
-        output << "**Measure " << i+1 << "**" << endl;
-        if (*timing != *measure.getTiming())
-        {
-            // Add timing to output
+	for (list<Measure>::iterator it = m_measures.begin(); it != m_measures.end(); ++it)
+	{
+		Measure& measure = *it;
+		output << "**Measure " << measure.getIndex() << "**" << endl;
+		if (*timing != *measure.getTiming())
+		{
+			// Add timing to output
 			timing = measure.getTiming();
-            output << timing->description() << endl;
-        }
-        output << measure.description() << endl;
-    }
-    
+			output << timing->description() << endl;
+		}
+		output << measure.description() << endl;
+	}
     return output.str();
 }

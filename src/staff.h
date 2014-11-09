@@ -2,7 +2,7 @@
 #define STAFF_H
 
 #include "types.h"
-#include <vector>
+#include <list>
 #include <string>
 
 using namespace std;
@@ -35,7 +35,7 @@ public:
     string description();
 private:
     Instrument m_instrument;
-    vector<Measure> m_measures;
+    list<Measure> m_measures;
 };
 
 #endif // STAFF_H

@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
 	Staff staff;
 	staff.setInstrument(Guitar6);
 	Timing timing(4, 4, 120);
-	Measure measure(timing);
+	Measure measure(0, timing);
 	Tone tone1 = {Octave1, C, AccidentalNone};
 	Tone tone2 = {Octave1, D, AccidentalNone};
 	Tone tone3 = {Octave1, E, AccidentalNone};
