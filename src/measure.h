@@ -21,14 +21,25 @@ public:
 	
 	/**
 	 Make this measure a repeat of the previous measure.
+	 
+	 @return True if it succeeded; false otherwise.
 	 */
     bool makeRepeatOfPrev();
 	/**
 	 Add the given note to the measure.
 	 
 	 @param note The note to add to the measure.
+	 @return True if it succeeded; false otherwise.
 	 */
     bool addNote(Note note);
+	/**
+	 Inserts the given note at the specified index.
+	 
+	 @param index The index at which to insert the note.
+	 @param note The note to insert at the given index.
+	 @return True if it succeeded; false otherwise.
+	 */
+	bool insertNote(UInt index, Note note);
 	/**
 	 Remove the given note from the measure.
 	 
@@ -45,8 +56,6 @@ public:
 	 The timing associated with the measure.
 	 */
     Timing* getTiming();
-
-    string description();
 	
 	/**
 	 Get the index within the staff that this measure is located.
@@ -61,7 +70,8 @@ public:
 	 @param index The index to set.
 	 */
 	void setIndex(UInt index);
-    
+
+    string description();
 private:
     UInt m_index;
     UInt m_currentRepeat;

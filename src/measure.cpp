@@ -1,5 +1,7 @@
 #include "measure.h"
 
+typedef vector<Note>::iterator NoteIterator;
+
 Measure::Measure() :
     m_repeatMode(RepeatNone),
     m_isComplete(false)
@@ -51,11 +53,30 @@ bool Measure::addNote(Note note)
     return true;
 }
 
+bool Measure::insertNote(UInt index, Note note)
+{
+	NoteIterator it = m_notes.begin();
+	advance(it, index);
+	if (it == m_notes.end())
+	{
+		return false;
+	}
+	m_notes.insert(it, note);
+	return true;
+}
+
 bool Measure::removeNote(Note note)
 {
     // TODO: Recalculate
-    m_notes.erase(m_notes.end() - 1);
-    return true;
+	for (NoteIterator it = m_notes.begin(); it < m_notes.end(); it++)
+	{
+		if (*it == note)
+		{
+			m_notes.erase(it);
+			return true;
+		}
+	}
+    return false;
 }
 
 bool Measure::removeNote(UInt index)

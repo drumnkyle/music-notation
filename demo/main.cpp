@@ -10,6 +10,8 @@
 
 #include "../src/music_notation_api.h"
 
+using namespace std;
+
 int main(int argc, const char * argv[]) {
 
 	Staff staff;
@@ -28,6 +30,17 @@ int main(int argc, const char * argv[]) {
 	measure.addNote(note3);
 	measure.addNote(note4);
 	staff.addMeasure(measure);
+	
+	Measure measure2(measure);
+	measure2.setIndex(1);
+	measure2.removeNote(note1);
+	Tone tone5 = {Octave2, A, AccidentalSharp};
+	Note note5(Quarter, false, Down, false, tone5);
+	if (!measure2.insertNote(0, note5))
+	{
+		cout << "Inserting note failed" << endl;
+	}
+	staff.addMeasure(measure2);
 	
 	printf("%s", staff.description().c_str());
 	

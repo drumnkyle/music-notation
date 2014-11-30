@@ -12,6 +12,17 @@ struct Tone
     Octave m_octave;
     NoteLetter m_letter;
     Accidental m_accidental;
+	
+	bool operator ==(const Tone &tone) const
+	{
+		if (m_octave == tone.m_octave &&
+			m_letter == tone.m_letter &&
+			m_accidental == tone.m_accidental)
+		{
+			return true;
+		}
+		return false;
+	}
 };
 
 static Tone ToneNone = {OctaveCount, NoteLetterCount, AccidentalCount};

@@ -96,7 +96,7 @@ Note::~Note()
     
 }
 
-string Note::description()
+string Note::description() const
 {
     // Creates a string that lists the attributes of the given note
     
@@ -113,42 +113,59 @@ string Note::description()
     return output;
 }
 
-bool Note::isRest()
+bool Note::isRest() const
 {
 	return m_isRest;
 }
 
-NoteDuration Note::getDuration()
+NoteDuration Note::getDuration() const
 {
 	return m_duration;
 }
 
-bool Note::hasDot()
+bool Note::hasDot() const
 {
 	return m_hasDot;
 }
 
-bool Note::startOfTie()
+bool Note::startOfTie() const
 {
 	return m_tieStart;
 }
 
-bool Note::endOfTie()
+bool Note::endOfTie() const
 {
 	return m_tieEnd;
 }
 
-bool Note::hasAccent()
+bool Note::hasAccent() const
 {
 	return m_hasAccent;
 }
 
-Striking Note::getStriking()
+Striking Note::getStriking() const
 {
 	return m_striking;
 }
 
-Tone Note::getTone()
+Tone Note::getTone() const
 {
 	return m_tone;
+}
+
+bool Note::operator ==(const Note &note) const
+{
+	if (m_isRest == note.m_isRest &&
+		m_duration == note.m_duration &&
+		m_hasDot == note.m_hasDot &&
+		m_tieStart == note.m_tieStart &&
+		m_tieEnd == note.m_tieEnd &&
+		m_hasAccent == note.m_hasAccent &&
+		m_isStaccato == note.m_isStaccato &&
+		m_striking == note.m_striking &&
+		m_tone == note.m_tone)
+	{
+		return true;
+	}
+	return false;
 }

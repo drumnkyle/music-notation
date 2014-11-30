@@ -67,19 +67,21 @@ public:
     Note(NoteDuration duration, bool isRest, Striking striking, bool hasAccent, Tone tone);
     
     ~Note();
+	
+	bool operator ==(const Note &note) const;
     
-    string description();
+    string description() const;
 	
 	// Getters //
-	bool isRest();
-	NoteDuration getDuration();
-	bool hasDot();
-	bool startOfTie();
-	bool endOfTie();
-	bool hasAccent();
-	bool isStaccato();
-	Striking getStriking();
-	Tone getTone();
+	bool isRest() const;
+	NoteDuration getDuration() const;
+	bool hasDot() const;
+	bool startOfTie() const;
+	bool endOfTie() const;
+	bool hasAccent() const;
+	bool isStaccato() const;
+	Striking getStriking() const;
+	Tone getTone() const;
 	
 private:
     bool m_isRest;
