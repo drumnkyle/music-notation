@@ -15,10 +15,16 @@ class Staff
 {
 public:
     Staff();
-    Staff(Instrument instrument);
+    Staff(Clef clef, Instrument instrument);
     
     ~Staff();
 
+	/**
+	 Set the clef with which this staff should be associated.
+	 
+	 @param clef The clef that this staff is in.
+	 */
+	void setClef(Clef clef);
 	/**
 	 Set the instrument with which this staff should be associated.
 	 
@@ -47,10 +53,15 @@ public:
 	 */
 	bool insertMeasureAtIndex(UInt index, Measure newMeasure);
 	
+	// Getters //
+	Clef getClef() const;
+	Instrument getInstrument() const;
+	
     string description();
 private:
     Instrument m_instrument;
     list<Measure> m_measures;
+	Clef m_clef;
 };
 
 #endif // STAFF_H

@@ -12,7 +12,6 @@ using namespace std;
 class Measure
 {
 public:
-    Measure();
     Measure(const Measure& measure);
     Measure(UInt index, Timing timing);
     Measure(UInt index, Repeat repeatMode);

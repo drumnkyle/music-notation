@@ -51,7 +51,7 @@ string Timing::description()
     return output.str();
 }
 
-bool Timing::operator==(Timing timing)
+bool Timing::operator==(const Timing &timing) const
 {
     bool isEqual = true;
     if (m_topNumber != timing.m_topNumber)
@@ -64,7 +64,7 @@ bool Timing::operator==(Timing timing)
     return isEqual;
 }
 
-bool Timing::operator!=(Timing timing)
+bool Timing::operator!=(const Timing &timing) const
 {
     return !(*this == timing);
 }

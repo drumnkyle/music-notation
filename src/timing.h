@@ -6,6 +6,9 @@
 
 using namespace std;
 
+/**
+ Describes the time signature and tempo.
+ */
 class Timing
 {
 public:
@@ -33,8 +36,8 @@ public:
     
     string description();
     
-    bool operator==(Timing timing);
-    bool operator!=(Timing timing);
+    bool operator==(const Timing &timing) const;
+    bool operator!=(const Timing &timing) const;
 	
     void setTopNumber(UInt topNumber);
     void setBottomNumber(UInt bottomNumber);

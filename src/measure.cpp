@@ -2,12 +2,6 @@
 
 typedef vector<Note>::iterator NoteIterator;
 
-Measure::Measure() :
-    m_repeatMode(RepeatNone),
-    m_isComplete(false)
-{
-}
-
 Measure::Measure(const Measure& measure)
 {
     this->m_index = measure.m_index;

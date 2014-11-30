@@ -113,6 +113,17 @@ enum Repeat
     RepeatCount
 };
 
+/**
+ The Clef of the staff: treble or bass.
+ */
+enum Clef
+{
+	ClefTreble,
+	ClefBass,
+	
+	ClefCount
+};
+
 // Functions for Getting Descriptions
 const string GetStrikingString(Striking striking);
 const string GetNoteDurationString(NoteDuration noteDuration);

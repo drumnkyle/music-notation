@@ -5,11 +5,12 @@
 typedef list<Measure>::iterator MeasureIterator;
 
 Staff::Staff() :
-    m_instrument(InstrumentCount)
+    m_instrument(InstrumentCount),
+	m_clef(ClefTreble)
 {
 }
 
-Staff::Staff(Instrument instrument) : m_instrument(instrument)
+Staff::Staff(Clef clef, Instrument instrument) : m_instrument(instrument), m_clef(clef)
 {
 }
 
@@ -50,6 +51,16 @@ bool Staff::insertMeasureAtIndex(UInt index, Measure newMeasure)
 	}
 	m_measures.insert(it, newMeasure);
 	return true;
+}
+
+Clef Staff::getClef() const
+{
+	return m_clef;
+}
+
+Instrument Staff::getInstrument() const
+{
+	return m_instrument;
 }
 
 string Staff::description()
